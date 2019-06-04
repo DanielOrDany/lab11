@@ -1,0 +1,65 @@
+# usr/bin/bash -tt
+import os
+
+class Airplane:
+	#
+	def __init__(self, name, seatsNumber, maxLoadCapacity, maxDistance, maxSpeed, flightRange, fuselageDiameter):
+		self.name = name
+		self.seatsNumber = seatsNumber
+		self.maxLoadCapacity = maxLoadCapacity
+		self.maxDistance = maxDistance
+		self.maxSpeed = maxSpeed
+		self.flightRange = flightRange
+		self.fuselageDiameter = fuselageDiameter
+	
+	@property
+	def get_name(self):
+		return self.__name		
+	@Airplane.setter
+    def set_name(self, x):
+		self.__name = x
+	@property		
+	def get_seatsNumber(self):
+        return self.__seatsNumber
+	@Airplane.setter
+    def set_seatsNumber(self, x):
+        self.__seatsNumber = x
+	@property		
+	def get_maxLoadCapacity(self):
+        return self.__maxLoadCapacity
+	@Airplane.setter
+    def set_maxLoadCapacity(self, x):
+        self.__maxLoadCapacity = x
+	@property		
+	def get_maxDistance(self):
+        return self.__maxDistance
+	@Airplane.setter
+    def set_maxDistance(self, x):
+        self.__maxDistance = x
+	@property		
+	def get_maxSpeed(self):
+        return self.__maxSpeed
+	@Airplane.setter
+    def set_maxSpeed(self, x):
+        self.__maxSpeed = x
+	@property		
+	def get_flightRange(self):
+        return self.__flightRange
+	@Airplane.setter
+    def set_flightRange(self, x):
+        self.__flightRange = x
+	@property		
+	def get_fuselageDiameter(self):
+        return self.__fuselageDiameter
+	@Airplane.setter
+    def set_fuselageDiameter(self, x):
+        self.__fuselageDiameter = x
+		
+def main():		
+	airplane = Airplane("Alexa-32", 120, 5000, 2000, 430, 1200, 9)
+	print(airplane.get_name)
+
+if __name__ == "__main__": main()
+
+os.system("PAUSE")
+

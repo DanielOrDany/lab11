@@ -1,0 +1,41 @@
+# usr/bin/bash -tt
+import abc
+
+class AirlineManager(abc.ABC):
+
+	@abc.abstractmethod
+	def getList():
+        pass
+	
+	# @abc.abstractmethod
+    # def sortByMaxSpeed(list, order):
+        # pass
+		
+	# @abc.abstractmethod
+    # def sortByMaxDistance(list, order):
+        # pass
+		
+	@abc.abstractmethod
+	def countSeats(aircraft):
+        pass
+		
+	@abc.abstractmethod
+    def countMaxLoadCapacity(aircraft):
+        pass
+		
+	@abc.abstractmethod
+    def addAirplane(aircraft):
+        pass
+		
+	@abc.abstractmethod
+    def clearAirplaneList():
+        pass
+		
+	# @abc.abstractmethod
+    # def printListOfAirplanes(sortedBy):
+        # pass
+		
+	@abc.abstractmethod
+    def setNewListOfAirplanes(aircraft_list):
+        pass
+		

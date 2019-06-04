@@ -1,0 +1,68 @@
+# usr/bin/bash -tt
+import sys
+sys.path.insert(0,'D:\\Python\\labs\\Python-Lab-11\\__main__\\python\\ua\\lviv\\iot\\airline\\models')
+from CabinNarrow import CabinNarrow
+from Airplane import Airplane 
+from PassengerAircraft import PassengerAircraft
+import os
+
+class AirlineManagerImplementation:
+	list = []
+	
+	@staticmethod
+	def getList():
+		return AirlineManagerImplementation.list
+
+	@staticmethod
+	def sortByMaxSpeed():
+		sorted(AirlineManagerImplementation.list, key=lambda Airplane: Airplane.get_maxSpeed)
+	
+	@staticmethod	
+	def sortByMaxDistance():
+		sorted(AirlineManagerImplementation.list, key=lambda Airplane: Airplane.get_maxDistance)
+	
+	@staticmethod	
+	def setNewListOfAirplanes(x):
+		AirlineManagerImplementation.list = x
+	
+	@staticmethod
+	def clearAirplaneList():
+		AirlineManagerImplementation.list.clear()
+	
+	@staticmethod
+	def addAirplane(x):
+		AirlineManagerImplementation.list.append(x)
+	
+	@staticmethod
+	def countMaxLoadCapacity(x):
+		return x.get_maxLoadCapacity
+	
+	@staticmethod	
+	def countSeats(x):
+		return x.get_seatsNumber
+	
+	@staticmethod
+	def printListOfAirplanes():
+		for v in AirlineManagerImplementation.list:
+			print(v.get_name)
+		
+def main():	
+	m = AirlineManagerImplementation()
+	airplane1 = Airplane('Alexa-1', 120, 5000, 2000, 430, 1200, 9, CabinNarrow.FIVEABREAST.value)
+	airplane2 = Airplane('Alexa-2', 130, 5000, 2000, 430, 1200, 9, CabinNarrow.FIVEABREAST.value)
+	airplane3 = Airplane('Alexa-3', 110, 5000, 2000, 430, 1200, 9, CabinNarrow.FIVEABREAST.value)
+	#pA = PassengerAircraft('AbI-23', 120, 5000, 2000, 430, 1200, 9, True, ComfortLevel.FIRST.value)
+	m.addAirplane(airplane1)
+	m.addAirplane(airplane2)
+	m.addAirplane(airplane3)
+	#print(m.getList())
+	m.printListOfAirplanes()
+	#print(CabinNarrow.FIVEABREAST.value)
+	#print(sys.path)
+	m.sortByMaxDistance()
+	m.printListOfAirplanes()
+	print(m.countSeats(airplane1))
+
+if __name__ == "__main__": main()
+
+os.system("PAUSE")

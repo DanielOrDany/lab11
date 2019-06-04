@@ -1,0 +1,11 @@
+# usr/bin/bash -tt
+from enum import Enum
+
+class CabinNarrow(Enum):
+	SIXABREAST = 6
+	FIVEABREAST = 5
+	FOURABREAST = 4
+	THREEBREAST = 3
+	TWOABREAST = 2
+		
+

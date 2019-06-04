@@ -1,0 +1,49 @@
+# usr/bin/bash -tt
+from AirlineManager import AirlineManager
+from Airplane import Airplane 
+import os
+import sys
+sys.path.insert(0, ' \Python-Lab-11\main\python\ua\lviv\iot\airline\models')
+
+
+class AirlineManagerImplementation(AirlineManager):
+	list = []
+	
+	def getList():
+		return list
+
+	# def sortByMaxSpeed(list1, order1):
+		# print("a")
+		
+    # def sortByMaxDistance(new_list, new_order):
+		# print("b")
+		
+	def setNewListOfAirplanes(x):
+		list = x
+	
+	def clearAirplaneList():
+		list.clear()
+	
+	def addAirplane(airplane):
+		list.append(airplane)
+	
+	def countMaxLoadCapacity(airplane):
+		if airplane.__eq__(self, Airplane) == True:
+			return airplane.getMaxLoadCapacity()
+		
+	def countSeats(airplane):
+		if airplane.__eq__(self, Airplane) == True:
+			return airplane.getSeatsNumber()
+	
+	# def printListOfAirplanes(sortedBy):
+		# print("d")	
+		
+def main():	
+	airplane = Airplane('Alexa-32', 120, 5000, 2000, 430, 1200, 9, CabinNarrow.SIXABREAST.value)	
+	m = AirlineManagerImplementation
+	m.addAirplane(airplane)
+	m.get_list()
+
+if __name__ == "__main__": main()
+
+os.system("PAUSE")

@@ -1,0 +1,13 @@
+# usr/bin/bash -tt
+from enum import Enum
+
+class CabinNarrow(Enum):
+	SIXABREAST = "SIXABREAST"
+	FIVEABREAST = "FIVEABREAST"
+	FOURABREAST = "FOURABREAST"
+	THREEBREAST = "THREEBREAST"
+	TWOABREAST = "TWOABREAST"
+	def print_n():
+		print("yeap")
+#print(CabinNarrow.SIXABREAST==CabinNarrow.SIXABREAST)
+
